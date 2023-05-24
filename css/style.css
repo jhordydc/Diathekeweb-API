@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 04/08/2017, 01:14:06
+    Author     : guilh
+*/
+body {
+    background: #f2f2f2;
+}
+audio {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.card-title {
+    width: 100%;
+    background: linear-gradient(transparent, #000);
+}
+.tocando {
+    background-image: linear-gradient(transparent, #000), url('../img/171d8ed1.gif');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100px;
+}
+@media(min-width: 992px) {
+    .__busca {
+        margin-top: 20%;
+    }        
+}

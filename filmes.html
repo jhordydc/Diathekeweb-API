@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <!-- bootstrap 3 -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+ <!-- google font -->
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+ <!-- my css sylesheet -->
+ <link rel="stylesheet" href="css/style_musica.css">
+ <link rel="stylesheet" href="css/style_cotacao.css">
+ <link rel="stylesheet" href="css/style_filme.css">
+  <title>Meu multiAppi Web</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- corpo do site -->
+    <main>
+      <!-- sidebar -->
+      <div id="nav-lg">
+        <div class="nav-lg-top">
+          <div id="logo">
+            <a>
+              DIATHEKE WEB
+            </a>
+          </div>
+
+          <div id="nav-desktop">
+            <ul>
+              <li class="nav_active">
+                <a href="#">
+                  <i class="fas fa-home fa-fw"></i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-search fa-fw"></i>
+                  Procurar
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-book-open fa-fw"></i>
+                  Minha Livraria
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="playlist">
+            <h4>Playlist</h4>
+            <a href="#" class="new_playlist">
+              <i class="fas fa-plus-square"></i>
+              Criar Playlist
+            </a>
+            <div class="playlist_scroll">
+              <ul>
+                <li><a href="index.html">Minhas musicas</a></li>
+                <li><a href="filmes.html">Meus filmes</a></li>
+                <li><a href="cotacao.html">Minhas Cotações</a></li>
+                <li><a href="temperatura.html">Minhas Temperaturas</a></li>
+                <li><a href="tradutor.html">Minhas Traduções</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-lg-bottom">
+          <div id="user">
+            <div class="app">
+              <a href="#">
+                <i class="fas fa-download"></i>
+                Instal App
+              </a>
+            </div>
+            <div class="current_user">
+              <a href="#">
+                <i class="fas fa-user-circle"></i>
+                <strong>Jhordy De la Cruz</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav-xs">
+        <div class="nav-xs-top">
+          <div id="logo-xs">
+            <a href="#">
+              <img src="img/spotify-logo-icon.svg" alt="Logo di Spotify">
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fas fa-home fa-fw"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-book-open fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-xs-bottom">
+          <a href="#">
+            <i class="fas fa-download"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </div>
+      </div>
+      <!-- sidebar -->
+
+      <!-- conteudo -->
+      <div id="main-content">
+        <!-- call to action in alto -->
+        <div class="cta">
+          <a href="#">Sair</a>
+        </div>
+        <!-- /call to action in alto -->
+
+        <!-- menu conteudo -->
+        <div class="nav-content">
+          <ul>
+            <li><a href="index.html">Músicas</a></li>
+            <li><a class="nav-content-active" href="filmes.html">filmes</a></li>
+            <li><a href="cotacao.html">Cotação</a></li>
+            <li><a href="temperatura.html">Temperatura</a></li>
+            <li><a href="tradutor.html">Tradutor</a></li>
+          </ul>
+        </div>
+        <!-- /menu conteudo -->
+
+        <!-- api -->
+        <main class="container">
+            <div class="header clearfix">
+                <h1>Buscar Filmes</h1>
+            </div>
+            <br><br>
+            <div class="jumbotron">
+                <div class="col-lg-12">
+                    <form class="input-group" id="formulario">                        
+                    <input type="text" class="form-control" id="pesquisar" placeholder="Digite o nome do filme"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit" >Buscar</button>
+                        </span>                            
+                    </form>
+                </div>
+            </div>
+        </main>
+    
+        <div class="container">
+            <div class="row" id="filmes"></div>
+        </div>
+    
+    <script src="assets/scripts/main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+        
+    <!-- /api -->
+
+        
+      </div>
+      <!-- /conteudo -->
+    </main>
+    <!-- /corpo do site -->
+
+   <!-- parte inferior do site -->
+   <footer>
+    <div id="song">
+      <div class="song-left">
+        <img src="img/inception.jpg" alt="">
+      </div>
+      <div class="song-right">
+        <h6>Música</h6>
+        <a href="#">Tempo</a>
+      </div>
+      <div class="song-icons">
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="#"><i class="far fa-folder"></i></a>
+      </div>
+    </div>
+
+    <div id="player">
+      <div class="player-top">
+        <i class="fas fa-random"></i>
+        <i class="fas fa-step-backward"></i>
+        <i class="far fa-play-circle"></i>
+        <i class="fas fa-step-forward"></i>
+        <i class="fas fa-redo-alt"></i>
+      </div>
+      <div class="player-bottom">
+        <span>0:00</span>
+        <div class="line-bottom">
+          <div class="line-top">
+            <div class="line-circle"></div>
+          </div>
+        </div>
+        <span>0:29</span>
+      </div>
+    </div>
+
+    <div id="controls">
+      <i class="fas fa-list-ul"></i>
+      <i class="fas fa-desktop"></i>
+      <i class="fas fa-volume-up"></i>
+      <div class="line-bottom-small">
+        <div class="line-top-small">
+          <div class="line-circle-small"></div>
+        </div>
+      </div>
+    </div>
+</footer>
+<!-- /parte inferior do site -->
+  </div>
+</body>
+</html>
